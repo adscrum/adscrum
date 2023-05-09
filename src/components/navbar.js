@@ -3,7 +3,10 @@ import Link from "next/link";
 const Navbar = () => {
   return (
     <nav className="flex flex-wrap items-center justify-between bg-teal-500 p-6">
-      <div className="mr-6 flex flex-shrink-0 items-center text-white">
+      <Link
+        href="/"
+        className="mr-6 flex flex-shrink-0 items-center text-white"
+      >
         <svg
           className="mr-2 h-8 w-8 fill-current"
           width="54"
@@ -14,7 +17,8 @@ const Navbar = () => {
           <path d="M13.5 22.1c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05zM0 38.3c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05z" />
         </svg>
         <span className="text-xl font-semibold tracking-tight">MyApp</span>
-      </div>
+      </Link>
+
       <div className="block lg:hidden">
         <button className="flex items-center rounded border border-teal-400 px-3 py-2 text-teal-200 hover:border-white hover:text-white">
           <svg
