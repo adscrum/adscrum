@@ -5,8 +5,8 @@ import Footer from "../components/footer";
 import {AuthContextProvider} from "@/context/AuthContext";
 
 //adding nextjs fonts https://blog.logrocket.com/next-js-font-optimization-custom-google-fonts/
-import {Roboto} from "@next/font/google";
-const roboto = Roboto({weight: ["400", "700", "900"], subsets: ["latin"]});
+import {Figtree} from "@next/font/google";
+const figtree = Figtree({weight: ["400", "700", "900"], subsets: ["latin"]});
 
 export default function RootLayout({children}) {
   return (
@@ -16,12 +16,13 @@ export default function RootLayout({children}) {
         head.js. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
       <head />
-      <body>
+      {/* Set flex and 100vh to stick footer component to bottom page https://dev.to/nehalahmadkhan/how-to-make-footer-stick-to-bottom-of-web-page-3i14 */}
+      <body className="flex h-screen flex-col">
         <AuthContextProvider>
           <Navbar />
           <style jsx global>{`
             :root {
-              --roboto-font: ${roboto.style.fontFamily};
+              --roboto-font: ${figtree.style.fontFamily};
             }
           `}</style>
           {children}
