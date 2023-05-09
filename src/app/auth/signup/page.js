@@ -23,9 +23,9 @@ function Page() {
     return router.push("/dashboard");
   };
   return (
-    <div className="container mx-auto px-4 py-8">
-      <div className="mx-auto max-w-md rounded bg-slate-100 p-8">
-        <h1 className="mb-2 text-lg font-bold">Sign up to MyApp</h1>
+    <div className="container mx-auto px-6 py-8">
+      <div className="mx-auto max-w-md rounded ">
+        <h1 className="mb-2 text-2xl font-bold">Sign up to MyApp</h1>
         <p className="mb-4 text-sm text-gray-700">
           Already a member?{" "}
           <Link className="text-blue-600 " href="/auth/signin">

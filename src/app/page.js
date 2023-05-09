@@ -8,8 +8,8 @@ export const metadata = {
 export default function Home() {
   return (
     <div>
-      <div className="container mx-auto p-6">
-        <h1 className="mb-2 text-3xl font-bold ">Home</h1>
+      <div className="container mx-auto p-6 py-8">
+        <h1 className="mb-2 text-2xl font-bold ">Home</h1>
         <p className="text-slate-700">
           This is our app please{" "}
           <Link href="/auth/signup" className=" text-blue-600 ">
