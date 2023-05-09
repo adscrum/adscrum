@@ -3,6 +3,14 @@ import React from "react";
 import signIn from "@/firebase/auth/signin";
 import {useRouter} from "next/navigation";
 
+// adding meta data doesnt work with use client
+// potential fix https://www.reddit.com/r/nextjs/comments/11fjnpq/new_metadata_support_and_use_client/
+
+// export const metadata = {
+//   title: "Site Page",
+//   description: "This is the site page",
+// };
+
 function Page() {
   const [email, setEmail] = React.useState(""); //do we need to say React here, check usestate docs
   const [password, setPassword] = React.useState("");
