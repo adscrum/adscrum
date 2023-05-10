@@ -58,7 +58,7 @@ function Page() {
             placeholder="password"
           />
         </label>
-        <div class="flex items-center justify-between">
+        <div className="flex items-center justify-between">
           <button
             className="focus:shadow-outline rounded bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-700 focus:outline-none"
             type="submit"

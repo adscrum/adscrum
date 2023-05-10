@@ -1,8 +1,13 @@
 import Link from "next/link";
 import {useState} from "react";
 
+//create an object of menu links and loop through for mobile and desktop menus
+
+//change mobile menu to become slide menu modal with close on click out of div
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+
   return (
     <nav className=" bg-teal-500 p-4 ">
       <div className="container mx-auto flex flex-wrap items-center justify-between ">
@@ -61,7 +66,7 @@ const Navbar = () => {
         <div>
           <Link
             href="/auth/signin"
-            className=" mr-4 inline-block  text-sm leading-none text-white lg:mt-0 "
+            className=" mr-4 inline-block  py-2 text-sm leading-none text-teal-100 hover:text-white lg:mt-0 "
           >
             Sign In
           </Link>
@@ -73,7 +78,36 @@ const Navbar = () => {
           </Link>
         </div>
       </div>
-      {isOpen && <div>Mobile navigation items here</div>}
+      {isOpen && (
+        <div
+          onClick={() => setIsOpen(!isOpen)}
+          onBlur={() => setIsOpen(!isOpen)}
+        >
+          <div
+            id="mobile-navbar-items"
+            className="container mx-auto text-sm lg:hidden "
+          >
+            <Link
+              href="/"
+              className="mr-4 mt-4 block text-teal-100 hover:text-white  "
+            >
+              Home
+            </Link>
+            <Link
+              href="/examples"
+              className="mr-4 mt-4 block text-teal-100 hover:text-white "
+            >
+              Examples
+            </Link>
+            <Link
+              href="/blog"
+              className="mt-4 block text-teal-100 hover:text-white  "
+            >
+              Blog
+            </Link>
+          </div>
+        </div>
+      )}
     </nav>
   );
 };

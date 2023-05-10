@@ -57,7 +57,7 @@ function Page() {
               className=" mb-6 w-full appearance-none rounded border px-4 py-4 leading-tight text-gray-700 focus:outline-none"
             />
           </label>
-          <div class="flex items-center justify-between">
+          <div className="flex items-center justify-between">
             <button
               className="focus:shadow-outline rounded bg-blue-500 px-6 py-3  text-white hover:bg-blue-700 focus:outline-none"
               type="submit"
