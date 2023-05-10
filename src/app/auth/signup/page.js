@@ -46,7 +46,7 @@ function Page() {
             />
           </label>
           <label htmlFor="password">
-            <p className="mb-2 block  ">Password</p>
+            <p className="mb-2 block">Password</p>
             <input
               onChange={(e) => setPassword(e.target.value)}
               required
